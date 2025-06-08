@@ -21,8 +21,6 @@ fetch(url)
     .then( (data) => {
         //colocar as informações obtidas em uma variável que será um array
         let pokemons = data.results;
-        //Variável de contagem para acessar os nomes:
-        let i =0;
 
         //Retornará as informações de acordo com o número obtido do resultado
         return pokemons.map( (pokemon) => {
@@ -52,9 +50,6 @@ fetch(url)
             append(li, img);
             append(li, span);
             append(ul, li);
-
-            //incrementar o valor do contador
-            i++;
         })
     })
     .catch( (error) => {
